@@ -3,9 +3,8 @@ package in.choy.messagessandbox;
 import android.app.FragmentManager;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.view.View;
 import android.support.design.widget.NavigationView;
+import android.support.design.widget.Snackbar;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -13,13 +12,16 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import in.choy.FirstFragment;
 import in.choy.SecondFragment;
 import in.choy.ThirdFragment;
+import in.choy.bankaccount.account;
 
 public class MainActivity extends AppCompatActivity
     implements NavigationView.OnNavigationItemSelectedListener {
 
+  private account acc = new account();
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
@@ -86,19 +88,25 @@ public class MainActivity extends AppCompatActivity
     FragmentManager fm = getFragmentManager();
 
     if (id == R.id.nav_layout1) {
+      fm.popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
       fm.beginTransaction()
           .replace(R.id.content_main2
-              , new FirstFragment())
+              , FirstFragment.newInstance(acc))
+          .addToBackStack("string")
           .commit();
     } else if (id == R.id.nav_layout2) {
+      fm.popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
       fm.beginTransaction()
           .replace(R.id.content_main2
               , new SecondFragment())
+          .addToBackStack("string")
           .commit();
     } else if (id == R.id.nav_layout3) {
+      fm.popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
       fm.beginTransaction()
           .replace(R.id.content_main2
               , new ThirdFragment())
+          .addToBackStack("string")
           .commit();
     } else if (id == R.id.nav_camera) {
       // Handle the camera action
