@@ -3,9 +3,21 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_send_message"
-            android:icon="@drawable/ic_menu_send"
-            android:title="Send" />
+          android:id="@+id/nav_send_message"
+          android:icon="@drawable/ic_menu_send"
+          android:title="Send" />
+        <item
+          android:id="@+id/nav_layout1"
+          android:icon="@drawable/ic_menu_send"
+          android:title="First Layout" />
+        <item
+          android:id="@+id/nav_layout2"
+          android:icon="@drawable/ic_menu_send"
+          android:title="Second Layout" />
+        <item
+          android:id="@+id/nav_layout3"
+          android:icon="@drawable/ic_menu_send"
+          android:title="Third Layout" />
     </group>
 
     <item android:title="View Messages">
