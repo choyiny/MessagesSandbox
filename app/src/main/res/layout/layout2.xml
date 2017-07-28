@@ -8,4 +8,31 @@
     android:layout_centerHorizontal="true"
     android:layout_centerVertical="true"
     android:text="Second Layout" />
+  <Button
+    android:id="@+id/button5"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Button"
+    android:layout_below="@+id/textView3"
+    android:layout_alignStart="@+id/textView3"
+    android:layout_marginStart="52dp"
+    android:layout_marginTop="91dp" />
+  <Button
+    android:id="@+id/button6"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Button"
+    android:layout_above="@+id/button7"
+    android:layout_toEndOf="@+id/textView3"
+    android:layout_marginStart="12dp"
+    android:layout_marginBottom="16dp" />
+  <Button
+    android:id="@+id/button7"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="17dp"
+    android:layout_marginEnd="12dp"
+    android:layout_above="@+id/textView3"
+    android:layout_toStartOf="@+id/textView3"
+    android:text="Button" />
 </RelativeLayout>
