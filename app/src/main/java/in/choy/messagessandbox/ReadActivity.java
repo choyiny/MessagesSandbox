@@ -15,7 +15,7 @@ public class ReadActivity extends AppCompatActivity {
 
     ListView listView;
     private List<Message> myMessages = MyAwesomeMessages.getInstance().getAllMessages();
-    
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,7 +26,7 @@ public class ReadActivity extends AppCompatActivity {
 
     private void showMessages() {
         MyAwesomeMessages.getInstance().sendMessage("Big Title", "Small stuff hello world");
-        MyAwesomeMessages.getInstance().sendMessage("Big Tasdasditle", "Small stuff helsasdasdlo world");
+        MyAwesomeMessages.getInstance().sendMessage("Big Tasdasditle", "Small stuff helsasdasdlo world, this is a message, lorem ipsum foo foo foo bar bar overflow?");
 
         ArrayAdapter<Message> adapter = new MessagesListAdapter(this, R.layout.message_item_advanced, myMessages);
         ListView list = (ListView) findViewById(R.id.messages_list_view);

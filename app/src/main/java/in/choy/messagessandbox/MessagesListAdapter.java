@@ -49,7 +49,7 @@ public class MessagesListAdapter extends ArrayAdapter<Message> {
 
             // message content set
             TextView messageContent = messageView.findViewById(R.id.message_overview);
-            messageContent.setText(currentMessage.getMessage());
+            messageContent.setText(currentMessage.getOverview());
 
             // message sender set
             TextView messageSender = messageView.findViewById(R.id.message_sender);

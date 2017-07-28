@@ -34,6 +34,14 @@ public class Message {
         this.message = message;
     }
 
+    public String getOverview() {
+        if (message.length() > 50) {
+            return message.substring(0, 50) + "...";
+        } else {
+            return message;
+        }
+    }
+
     public String getMessage() {
         return this.message;
     }
