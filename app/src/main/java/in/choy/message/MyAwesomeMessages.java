@@ -8,8 +8,13 @@ import java.util.ArrayList;
 
 public class MyAwesomeMessages {
 
+    private static final MyAwesomeMessages INSTANCE = new MyAwesomeMessages();
+
     private ArrayList<Message> myMessages = new ArrayList<>();
 
+    public static MyAwesomeMessages getInstance() {
+        return INSTANCE;
+    }
 
     public boolean sendMessage(String title, String message) {
         Message msg = new Message(title, message);
@@ -28,6 +33,6 @@ public class MyAwesomeMessages {
     }
 
     public ArrayList<Message> getAllMessages() {
-        return this.myMessages;
+        return myMessages;
     }
 }
